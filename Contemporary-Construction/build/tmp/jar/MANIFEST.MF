@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: contemporaryconstruction
+Specification-Vendor: iktaun
+Specification-Version: 1
+Implementation-Title: contemporary-construction
+Implementation-Version: 0.2.0
+Implementation-Vendor: iktaun
+Implementation-Timestamp: 2026-09-26T16:45:38+0800
+

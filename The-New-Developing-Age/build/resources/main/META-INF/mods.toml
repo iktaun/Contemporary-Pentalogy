@@ -1,0 +1,50 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="thenewdevelopingage"
+version="0.1.0"
+displayName="跨越新时代 The New Developing Age"
+authors="iktaun"
+description='''现代五部曲的科技起点。以机械动力为核心，引入新时代的能源、材料与自动化体系，为后续四部曲奠定工业基础。
+The technological starting point of the Contemporary Pentalogy. Built around Create, it introduces a new era of energy, materials, and automation, laying the industrial foundation for the four chapters that follow.'''
+
+# ============================================================
+# 依赖 / Dependencies
+# ============================================================
+
+[[dependencies.thenewdevelopingage]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.thenewdevelopingage]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.thenewdevelopingage]]
+modId="iktaunmodelloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.thenewdevelopingage]]
+modId="iktaunguiloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.thenewdevelopingage]]
+modId="create"
+mandatory=true
+versionRange="[6.0.8,6.1.0)"
+ordering="NONE"
+side="BOTH"

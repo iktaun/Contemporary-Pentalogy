@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contemporary-agriculture/Contemporary-Pentalogy.contemporary-agriculture.main.iml" filepath="$PROJECT_DIR$/.idea/modules/contemporary-agriculture/Contemporary-Pentalogy.contemporary-agriculture.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contemporary-agriculture/Contemporary-Pentalogy.contemporary-agriculture.test.iml" filepath="$PROJECT_DIR$/.idea/modules/contemporary-agriculture/Contemporary-Pentalogy.contemporary-agriculture.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contemporary-construction/Contemporary-Pentalogy.contemporary-construction.main.iml" filepath="$PROJECT_DIR$/.idea/modules/contemporary-construction/Contemporary-Pentalogy.contemporary-construction.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contemporary-construction/Contemporary-Pentalogy.contemporary-construction.test.iml" filepath="$PROJECT_DIR$/.idea/modules/contemporary-construction/Contemporary-Pentalogy.contemporary-construction.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cyberpunk-world/Contemporary-Pentalogy.cyberpunk-world.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cyberpunk-world/Contemporary-Pentalogy.cyberpunk-world.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cyberpunk-world/Contemporary-Pentalogy.cyberpunk-world.test.iml" filepath="$PROJECT_DIR$/.idea/modules/cyberpunk-world/Contemporary-Pentalogy.cyberpunk-world.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iktaun-gui-loader/Contemporary-Pentalogy.iktaun-gui-loader.main.iml" filepath="$PROJECT_DIR$/.idea/modules/iktaun-gui-loader/Contemporary-Pentalogy.iktaun-gui-loader.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iktaun-gui-loader/Contemporary-Pentalogy.iktaun-gui-loader.test.iml" filepath="$PROJECT_DIR$/.idea/modules/iktaun-gui-loader/Contemporary-Pentalogy.iktaun-gui-loader.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iktaun-model-loader/Contemporary-Pentalogy.iktaun-model-loader.main.iml" filepath="$PROJECT_DIR$/.idea/modules/iktaun-model-loader/Contemporary-Pentalogy.iktaun-model-loader.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iktaun-model-loader/Contemporary-Pentalogy.iktaun-model-loader.test.iml" filepath="$PROJECT_DIR$/.idea/modules/iktaun-model-loader/Contemporary-Pentalogy.iktaun-model-loader.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/peace-and-war/Contemporary-Pentalogy.peace-and-war.main.iml" filepath="$PROJECT_DIR$/.idea/modules/peace-and-war/Contemporary-Pentalogy.peace-and-war.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/peace-and-war/Contemporary-Pentalogy.peace-and-war.test.iml" filepath="$PROJECT_DIR$/.idea/modules/peace-and-war/Contemporary-Pentalogy.peace-and-war.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/the-new-developing-age/Contemporary-Pentalogy.the-new-developing-age.main.iml" filepath="$PROJECT_DIR$/.idea/modules/the-new-developing-age/Contemporary-Pentalogy.the-new-developing-age.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/the-new-developing-age/Contemporary-Pentalogy.the-new-developing-age.test.iml" filepath="$PROJECT_DIR$/.idea/modules/the-new-developing-age/Contemporary-Pentalogy.the-new-developing-age.test.iml" />
+    </modules>
+  </component>
+</project>

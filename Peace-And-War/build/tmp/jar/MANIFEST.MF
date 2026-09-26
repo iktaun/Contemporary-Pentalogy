@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: peaceandwar
+Specification-Vendor: iktaun
+Specification-Version: 1
+Implementation-Title: peace-and-war
+Implementation-Version: 0.1.0
+Implementation-Vendor: iktaun
+Implementation-Timestamp: 2026-09-26T16:45:41+0800
+

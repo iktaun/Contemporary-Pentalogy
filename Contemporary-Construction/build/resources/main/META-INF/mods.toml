@@ -1,0 +1,57 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="contemporaryconstruction"
+version="0.2.0"
+displayName="现代化建设 Contemporary Construction"
+authors="iktaun"
+description='''现代五部曲的建筑篇章。以现代都市与大型工程为灵感，提供模块化建材、结构组件与城市景观。
+The construction chapter of the Contemporary Pentalogy. Inspired by modern metropolises and large-scale engineering, it offers modular building materials, structural components, and urban scenery.'''
+
+# ============================================================
+# 依赖 / Dependencies
+# ============================================================
+
+[[dependencies.contemporaryconstruction]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryconstruction]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryconstruction]]
+modId="iktaunmodelloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryconstruction]]
+modId="iktaunguiloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryconstruction]]
+modId="create"
+mandatory=true
+versionRange="[6.0.8,6.1.0)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryconstruction]]
+modId="thenewdevelopingage"
+mandatory=true
+versionRange="[0.1.0,)"
+ordering="AFTER"
+side="BOTH"

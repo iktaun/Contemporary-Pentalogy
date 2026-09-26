@@ -1,0 +1,277 @@
+// ============================================================
+// 根 build.gradle / Root build.gradle
+// ============================================================
+
+plugins {
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)' apply false
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+' apply false
+}
+
+// ============================================================
+// 所有模块的元数据 / All module metadata
+// ============================================================
+def modMeta = [
+        'Iktaun-Model-Loader': [
+                id         : 'iktaunmodelloader',
+                name       : "iktaun模型加载库 iktaun's Model Loader",
+                license    : 'MPL-2.0',
+                authors    : 'iktaun',
+                description: '''现代五部曲的底层模型加载库，统一管理方块、物品、实体及自定义几何体的模型注册与渲染管线。
+A low-level model loading library for the Contemporary Pentalogy, unifying model registration and the rendering pipeline for blocks, items, entities, and custom geometry.'''
+        ],
+        'iktaun-GUI-loader': [
+                id         : 'iktaunguiloader',
+                name       : "iktaun界面加载库 iktaun's GUI Loader",
+                license    : 'MPL-2.0',
+                authors    : 'iktaun',
+                description: '''现代五部曲的底层界面加载库，提供屏幕、容器、菜单与 HUD 的统一注册入口和布局工具。
+A low-level GUI loading library for the Contemporary Pentalogy, offering unified registration entry points and layout utilities for screens, containers, menus, and HUD elements.'''
+        ],
+        'The-New-Developing-Age': [
+                id         : 'thenewdevelopingage',
+                name       : '跨越新时代 The New Developing Age',
+                license    : 'GPL-3.0',
+                authors    : 'iktaun',
+                description: '''现代五部曲的科技起点。以机械动力为核心，引入新时代的能源、材料与自动化体系，为后续四部曲奠定工业基础。
+The technological starting point of the Contemporary Pentalogy. Built around Create, it introduces a new era of energy, materials, and automation, laying the industrial foundation for the four chapters that follow.'''
+        ],
+        'contemporary-construction': [
+                id         : 'contemporaryconstruction',
+                name       : '现代化建设 Contemporary Construction',
+                license    : 'GPL-3.0',
+                authors    : 'iktaun',
+                description: '''现代五部曲的建筑篇章。以现代都市与大型工程为灵感，提供模块化建材、结构组件与城市景观。
+The construction chapter of the Contemporary Pentalogy. Inspired by modern metropolises and large-scale engineering, it offers modular building materials, structural components, and urban scenery.'''
+        ],
+        'Peace-And-War': [
+                id         : 'peaceandwar',
+                name       : '战争与和平 Peace and War',
+                license    : 'GPL-3.0',
+                authors    : 'iktaun',
+                description: '''现代五部曲的冲突篇章。在和平建设与战争工业之间寻找平衡，引入国防、外交与战时动员体系。
+The conflict chapter of the Contemporary Pentalogy. Balancing peaceful development against wartime industry, it introduces national defense, diplomacy, and wartime mobilization systems.'''
+        ],
+        'Contemporary_Agriculture': [
+                id         : 'contemporaryagriculture',
+                name       : '现代化农业 Contemporary Agriculture',
+                license    : 'GPL-3.0',
+                authors    : 'iktaun',
+                description: '''现代五部曲的农业篇章。以机械化、规模化与智能化为方向，重塑从耕种到加工的全产业链。
+The agriculture chapter of the Contemporary Pentalogy. Oriented toward mechanization, scale, and intelligence, it reshapes the entire chain from cultivation to processing.'''
+        ],
+        'Cyberpunk-World': [
+                id         : 'cyberpunkworld',
+                name       : '赛博朋克世界 Cyberpunk World',
+                license    : 'GPL-3.0',
+                authors    : 'iktaun',
+                description: '''现代五部曲的终章。霓虹、义体、数据与权力交织的高密度都市，探讨技术失控后的社会图景。
+The final chapter of the Contemporary Pentalogy. A high-density metropolis where neon, cybernetics, data, and power intertwine, exploring a society after technology slips out of control.'''
+        ],
+]
+
+// ============================================================
+// 所有子模块的公共配置 / Common config for all subprojects
+// ============================================================
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'net.minecraftforge.gradle'
+    apply plugin: 'org.parchmentmc.librarian.forgegradle'
+
+    // 版本：目录名转小写 + 连字符转下划线，再拼 _version
+    version = rootProject.property(
+            "${project.name.replace('-', '_').toLowerCase()}_version"
+    )
+    group = rootProject.maven_group
+
+    // 元数据：从 modMeta 取
+    def meta = modMeta[project.name]
+    def modId          = meta.id
+    def modName        = meta.name
+    def modLicense     = meta.license
+    def modAuthors     = meta.authors
+    def modDescription = meta.description
+
+    base { archivesName = modId }
+
+    java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+    // ----------------------------------------------------------
+    // 仓库 / Repositories
+    // ----------------------------------------------------------
+    repositories {
+        mavenCentral()
+        maven { url = 'https://maven.minecraftforge.net/' }
+        maven { url = 'https://maven.parchmentmc.org' }
+
+        // JEI
+        maven { url = 'https://maven.blamejared.com/' }
+        maven { url = 'https://modmaven.dev' }
+
+        // 本地 jar 仓库 / Local jar repo
+        flatDir { dir rootProject.file('libs') }
+    }
+
+    tasks.register("prepareKotlinBuildScriptModel") {}
+
+    minecraft {
+        mappings channel: mapping_channel, version: mapping_version
+        copyIdeResources = true
+
+        runs {
+            configureEach {
+                workingDirectory project.file('run')
+                property 'forge.logging.markers', 'REGISTRIES'
+                property 'forge.logging.console.level', 'debug'
+                mods { "${modId}" { source sourceSets.main } }
+            }
+            client {
+                property("mixin.env.remapRefMap", "true")
+                property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
+                property 'forge.enabledGameTestNamespaces', modId
+            }
+            server {
+                property 'forge.enabledGameTestNamespaces', modId
+                args '--nogui'
+            }
+            gameTestServer {
+                property 'forge.enabledGameTestNamespaces', modId
+            }
+            data {
+                workingDirectory project.file('run-data')
+                // ★ 关键修复：为数据生成添加 Mixin Refmap 重映射属性
+                property("mixin.env.remapRefMap", "true")
+                property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
+                args '--mod', modId, '--all',
+                        '--output', file('src/generated/resources/'),
+                        '--existing', file('src/main/resources/')
+            }
+        }
+    }
+
+    sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+    dependencies {
+        minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    }
+
+    // ----------------------------------------------------------
+    // The New Developing Age
+    // ----------------------------------------------------------
+    if (project.name == 'The-New-Developing-Age') {
+        dependencies {
+            implementation project(':Iktaun-Model-Loader')
+            implementation project(':iktaun-GUI-loader')
+
+            // 本地 jar 用 flatDir 坐标，fg.deobf 才能正确处理 remap
+            implementation fg.deobf("blank:create-1.20.1:6.0.8-289-slim")
+            implementation fg.deobf("blank:Ponder-Forge-1.20.1:1.0.91")
+            compileOnly  fg.deobf("blank:flywheel-forge-api-1.20.1:1.0.5")
+            runtimeOnly  fg.deobf("blank:flywheel-forge-1.20.1:1.0.5")
+            implementation fg.deobf("blank:Registrate-MC1.20:1.3.3")
+
+            compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixinextras_version}"))
+            implementation("io.github.llamalad7:mixinextras-forge:${mixinextras_version}")
+
+            compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
+            runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+        }
+    }
+
+    // ----------------------------------------------------------
+    // 其余四个主体 / The other four main mods
+    // ----------------------------------------------------------
+    if (project.name in [
+            'contemporary-construction',
+            'Peace-And-War',
+            'Contemporary_Agriculture',
+            'Cyberpunk-World'
+    ]) {
+        dependencies {
+            implementation project(':Iktaun-Model-Loader')
+            implementation project(':iktaun-GUI-loader')
+            implementation project(':The-New-Developing-Age')
+
+            implementation fg.deobf("blank:create-1.20.1:6.0.8-289-slim")
+            implementation fg.deobf("blank:Ponder-Forge-1.20.1:1.0.91")
+            compileOnly  fg.deobf("blank:flywheel-forge-api-1.20.1:1.0.5")
+            runtimeOnly  fg.deobf("blank:flywheel-forge-1.20.1:1.0.5")
+            implementation fg.deobf("blank:Registrate-MC1.20:1.3.3")
+
+            compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixinextras_version}"))
+            implementation("io.github.llamalad7:mixinextras-forge:${mixinextras_version}")
+
+            compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
+            runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+        }
+    }
+
+    // ----------------------------------------------------------
+    // processResources
+    // ----------------------------------------------------------
+    tasks.named('processResources', ProcessResources).configure {
+        var replaceProperties = [
+                minecraft_version      : minecraft_version,
+                minecraft_version_range: minecraft_version_range,
+                forge_version          : forge_version,
+                forge_version_range    : forge_version_range,
+                loader_version_range   : loader_version_range,
+                mod_id                 : modId,
+                mod_name               : modName,
+                mod_license            : modLicense,
+                mod_version            : project.version,
+                mod_authors            : modAuthors,
+                mod_description        : modDescription,
+        ]
+        inputs.properties replaceProperties
+        filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+            expand replaceProperties + [project: project]
+        }
+    }
+
+    // ----------------------------------------------------------
+    // jar 任务
+    // dev 环境不 reobf，保证其他模块能正确加载本模块的类。
+    // 发布时加 -Prelease 启用 reobf，生成生产版本。
+    // ----------------------------------------------------------
+    tasks.named('jar', Jar).configure {
+        manifest {
+            attributes([
+                    'Specification-Title'     : modId,
+                    'Specification-Vendor'    : modAuthors,
+                    'Specification-Version'   : '1',
+                    'Implementation-Title'    : project.name,
+                    'Implementation-Version'  : project.jar.archiveVersion,
+                    'Implementation-Vendor'   : modAuthors,
+                    'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+            ])
+        }
+        if (project.hasProperty('release')) {
+            finalizedBy 'reobfJar'
+        }
+    }
+
+    // ----------------------------------------------------------
+    // 发布 / Publishing
+    // ----------------------------------------------------------
+    publishing {
+        publications {
+            register('mavenJava', MavenPublication) { artifact jar }
+        }
+        repositories {
+            maven { url "file://${project.projectDir}/mcmodsrepo" }
+        }
+    }
+
+    // ----------------------------------------------------------
+    // 编码 / Encoding
+    // ----------------------------------------------------------
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(Javadoc).configureEach {
+        options.encoding = 'UTF-8'
+    }
+}

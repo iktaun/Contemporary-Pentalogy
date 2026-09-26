@@ -1,0 +1,30 @@
+{
+  "item.thenewdevelopingage.magnet_ingot":"磁铁",
+  "item.thenewdevelopingage.raw_magnet":"粗磁铁",
+  "item.thenewdevelopingage.coloured_magnet_ingot":"上色磁铁",
+  "item.thenewdevelopingage.uninformative_blue_ticket": "未打印的蓝色车票",
+  "item.thenewdevelopingage.uninformative_red_ticket": "未打印的红色车票",
+  "item.thenewdevelopingage.blue_ticket": "蓝色车票",
+  "item.thenewdevelopingage.red_ticket": "红色车票",
+  "item.thenewdevelopingage.raw_aluminium": "粗铝",
+  "item.thenewdevelopingage.aluminium_ingot": "铝锭",
+  "item.thenewdevelopingage.sulphur_powder": "硫磺",
+  "item.thenewdevelopingage.optical_cable": "光导纤维",
+  "item.thenewdevelopingage.optical_cable_wrench": "光纤扳手",
+  "item.thenewdevelopingage.redstone_wrench": "红石扳手",
+
+  "block.thenewdevelopingage.magnetite_ore":"磁铁矿",
+  "block.thenewdevelopingage.aluminium_ore": "铝矿",
+  "block.thenewdevelopingage.magnet_block":"磁铁块",
+  "block.thenewdevelopingage.coloured_magnet_block":"上色磁铁块",
+  "block.thenewdevelopingage.sulphur_ore": "硫磺矿",
+  "block.thenewdevelopingage.deepslate_sulphur_ore": "深板岩硫磺矿",
+  "block.thenewdevelopingage.deepslate_magnetite_ore": "深板岩磁铁矿",
+  "block.thenewdevelopingage.deepslate_aluminium_ore": "深板岩铝矿",
+
+
+  "itemGroup.ingredients": "原材料",
+  "itemGroup.blocks": "方块",
+  "itemGroup.objects": "物件",
+  "itemGroup.tools": "工具"
+}

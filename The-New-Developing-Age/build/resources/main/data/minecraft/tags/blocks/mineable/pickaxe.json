@@ -1,0 +1,11 @@
+{
+  "replace" : false,
+  "values": [
+    "thenewdevelopingage:magnetite_ore",
+    "thenewdevelopingage:aluminium_ore",
+    "thenewdevelopingage:sulphur_ore",
+    "thenewdevelopingage:deepslate_sulphur_ore",
+    "thenewdevelopingage:deepslate_aluminium_ore",
+    "thenewdevelopingage:deepslate_magnetite_ore"
+  ]
+}

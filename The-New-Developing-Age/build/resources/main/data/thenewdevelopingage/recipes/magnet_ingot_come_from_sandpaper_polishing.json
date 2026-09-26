@@ -1,0 +1,13 @@
+{
+  "type": "create:sandpaper_polishing",
+  "ingredients": [
+    {
+      "item": "thenewdevelopingage:raw_magnet"
+    }
+  ],
+  "results": [
+    {
+      "item": "thenewdevelopingage:magnet_ingot"
+    }
+  ]
+}

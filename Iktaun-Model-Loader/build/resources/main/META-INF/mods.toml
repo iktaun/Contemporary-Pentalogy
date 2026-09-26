@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MPL-2.0"
+
+[[mods]]
+modId="iktaunmodelloader"
+version="1.0.0"
+displayName="iktaun模型加载库 iktaun's Model Loader"
+authors="iktaun"
+description='''现代五部曲的底层模型加载库，统一管理方块、物品、实体及自定义几何体的模型注册与渲染管线。
+A low-level model loading library for the Contemporary Pentalogy, unifying model registration and the rendering pipeline for blocks, items, entities, and custom geometry.'''
+
+# ============================================================
+# 依赖 / Dependencies
+# ============================================================
+
+[[dependencies.iktaunmodelloader]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.iktaunmodelloader]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+# 前置库不依赖任何模组
+# Prerequisite libs depend on no mods.

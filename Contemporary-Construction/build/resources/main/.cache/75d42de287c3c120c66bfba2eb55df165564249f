@@ -1,0 +1,6 @@
+// 1.20.1	2026-09-25T20:24:59.6433449	Tags for minecraft:block mod id contemporaryconstruction
+99ae28e98d459cf81d00aecbc9bf3abd91f848d6 data/contemporaryconstruction/tags/blocks/editable_with_brush.json
+3f290dca2aeec86f56db2d809287d10b2cd9c7f5 data/contemporaryconstruction/tags/blocks/road_fence.json
+b1082d854445e551535300ffbd4d21b1d23880a6 data/contemporaryconstruction/tags/blocks/road_fence_barrier.json
+a0f5116b48229ebedd24f5fdf7dd1eb2e84044d9 data/contemporaryconstruction/tags/blocks/signpost_pole.json
+730fd770dd8a3c2d357bbc3ec86d519af0a60abe data/minecraft/tags/blocks/mineable/pickaxe.json

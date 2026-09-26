@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MPL-2.0"
+
+[[mods]]
+modId="iktaunguiloader"
+version="1.0.0"
+displayName="iktaun界面加载库 iktaun's GUI Loader"
+authors="iktaun"
+description='''现代五部曲的底层界面加载库，提供屏幕、容器、菜单与 HUD 的统一注册入口和布局工具。
+A low-level GUI loading library for the Contemporary Pentalogy, offering unified registration entry points and layout utilities for screens, containers, menus, and HUD elements.'''
+
+# ============================================================
+# 依赖 / Dependencies
+# ============================================================
+
+[[dependencies.iktaunguiloader]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.iktaunguiloader]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+# 前置库不依赖任何模组
+# Prerequisite libs depend on no mods.

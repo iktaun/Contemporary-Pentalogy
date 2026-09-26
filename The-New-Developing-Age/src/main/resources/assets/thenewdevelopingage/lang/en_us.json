@@ -1,0 +1,29 @@
+{
+  "item.thenewdevelopingage.magnet_ingot":"Magnet Ingot",
+  "item.thenewdevelopingage.raw_magnet":"Raw_Magnet",
+  "item.thenewdevelopingage.coloured_magnet_ingot":"Coloured Magnet Ingot",
+  "item.thenewdevelopingage.uninformative_blue_ticket": "Uninformative Blue Ticket",
+  "item.thenewdevelopingage.uninformative_red_ticket": "Uninformative_red_ticket",
+  "item.thenewdevelopingage.blue_ticket": "Blue Ticket",
+  "item.thenewdevelopingage.red_ticket": "Red Ticket",
+  "item.thenewdevelopingage.raw_aluminium": "Raw Aluminium",
+  "item.thenewdevelopingage.aluminium_ingot": "Aluminium Ingot",
+  "item.thenewdevelopingage.sulphur_powder": "Sulphur Powder",
+  "item.thenewdevelopingage.optical_cable": "Optical Cable",
+  "item.thenewdevelopingage.optical_cable_wrench": "Optical Cable Wrench",
+  "item.thenewdevelopingage.redstone_wrench": "Redstone Wrench",
+
+  "block.thenewdevelopingage.coloured_magnet_block": "Coloured Magnet Block",
+  "block.thenewdevelopingage.magnet_block": "Magnet Block",
+  "block.thenewdevelopingage.magnetite_ore": "Magnetite",
+  "block.thenewdevelopingage.aluminium_ore": "Aluminium Ore",
+  "block.thenewdevelopingage.sulphur_ore": "Sulphur Ore",
+  "block.thenewdevelopingage.deepslate_sulphur_ore": "Deepslate Sulphur Ore",
+  "block.thenewdevelopingage.deepslate_aluminium_ore": "Deepslate Aluminium Ore",
+  "block.thenewdevelopingage.deepslate_magnetite_ore": "Deepslate Magnetite Ore",
+
+  "itemGroup.ingredients": "Ingredients Items",
+  "itemGroup.blocks": "Blocks Items",
+  "itemGroup.objects": "Objects Items",
+  "itemGroup.tools": "Tools"
+}

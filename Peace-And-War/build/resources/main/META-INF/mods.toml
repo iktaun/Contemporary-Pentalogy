@@ -1,0 +1,57 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="peaceandwar"
+version="0.1.0"
+displayName="战争与和平 Peace and War"
+authors="iktaun"
+description='''现代五部曲的冲突篇章。在和平建设与战争工业之间寻找平衡，引入国防、外交与战时动员体系。
+The conflict chapter of the Contemporary Pentalogy. Balancing peaceful development against wartime industry, it introduces national defense, diplomacy, and wartime mobilization systems.'''
+
+# ============================================================
+# 依赖 / Dependencies
+# ============================================================
+
+[[dependencies.peaceandwar]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.peaceandwar]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.peaceandwar]]
+modId="iktaunmodelloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.peaceandwar]]
+modId="iktaunguiloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.peaceandwar]]
+modId="create"
+mandatory=true
+versionRange="[6.0.8,6.1.0)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.peaceandwar]]
+modId="thenewdevelopingage"
+mandatory=true
+versionRange="[0.1.0,)"
+ordering="AFTER"
+side="BOTH"

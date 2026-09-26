@@ -1,0 +1,57 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="cyberpunkworld"
+version="0.1.0"
+displayName="赛博朋克世界 Cyberpunk World"
+authors="iktaun"
+description='''现代五部曲的终章。霓虹、义体、数据与权力交织的高密度都市，探讨技术失控后的社会图景。
+The final chapter of the Contemporary Pentalogy. A high-density metropolis where neon, cybernetics, data, and power intertwine, exploring a society after technology slips out of control.'''
+
+# ============================================================
+# 依赖 / Dependencies
+# ============================================================
+
+[[dependencies.cyberpunkworld]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cyberpunkworld]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cyberpunkworld]]
+modId="iktaunmodelloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cyberpunkworld]]
+modId="iktaunguiloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cyberpunkworld]]
+modId="create"
+mandatory=true
+versionRange="[6.0.8,6.1.0)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cyberpunkworld]]
+modId="thenewdevelopingage"
+mandatory=true
+versionRange="[0.1.0,)"
+ordering="AFTER"
+side="BOTH"

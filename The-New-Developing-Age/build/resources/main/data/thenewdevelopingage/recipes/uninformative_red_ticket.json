@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:red_dye"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "PPP",
+    "BBB"
+  ],
+  "result": {
+    "item": "thenewdevelopingage:uninformative_red_ticket"
+  },
+  "show_notification": true
+}

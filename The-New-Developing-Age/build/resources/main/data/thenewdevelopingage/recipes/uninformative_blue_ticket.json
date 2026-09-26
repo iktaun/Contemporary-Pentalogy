@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:blue_dye"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "bbb",
+    "PPP",
+    "BBB"
+  ],
+  "result": {
+    "item": "thenewdevelopingage:uninformative_blue_ticket"
+  },
+  "show_notification": true
+}

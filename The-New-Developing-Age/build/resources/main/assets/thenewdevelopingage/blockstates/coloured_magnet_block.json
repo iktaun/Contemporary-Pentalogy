@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thenewdevelopingage:block/coloured_magnet_block"
+    },
+    "facing=east": {
+      "model": "thenewdevelopingage:block/coloured_magnet_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "thenewdevelopingage:block/coloured_magnet_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thenewdevelopingage:block/coloured_magnet_block",
+      "y": 270
+    }
+  }
+}

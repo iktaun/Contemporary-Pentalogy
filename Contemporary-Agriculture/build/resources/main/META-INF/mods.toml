@@ -1,0 +1,57 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="contemporaryagriculture"
+version="0.1.0"
+displayName="现代化农业 Contemporary Agriculture"
+authors="iktaun"
+description='''现代五部曲的农业篇章。以机械化、规模化与智能化为方向，重塑从耕种到加工的全产业链。
+The agriculture chapter of the Contemporary Pentalogy. Oriented toward mechanization, scale, and intelligence, it reshapes the entire chain from cultivation to processing.'''
+
+# ============================================================
+# 依赖 / Dependencies
+# ============================================================
+
+[[dependencies.contemporaryagriculture]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryagriculture]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryagriculture]]
+modId="iktaunmodelloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryagriculture]]
+modId="iktaunguiloader"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryagriculture]]
+modId="create"
+mandatory=true
+versionRange="[6.0.8,6.1.0)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.contemporaryagriculture]]
+modId="thenewdevelopingage"
+mandatory=true
+versionRange="[0.1.0,)"
+ordering="AFTER"
+side="BOTH"
